@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://br027x4qb2k5f"]
+
+[ext_resource type="Script" uid="uid://dk70xyv4fu4nm" path="res://addons/csg_builder/managers/command_manager.gd" id="1_cbxfv"]
+
+[node name="CommandManager" type="Node" unique_id=2029285087]
+script = ExtResource("1_cbxfv")
