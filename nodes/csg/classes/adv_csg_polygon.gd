@@ -11,7 +11,7 @@ func create_handles_square():
 		add_handle()
 		for i in range(4):
 			var handle = add_handle()
-			handle.position = Vector3((i % 2) * 2 - 1, (i / 2) % 2 * 2 - 1, 0.0)
+			handle.position = Vector3((i % 2) * 2, (i / 2) % 2 * 2, 0.0)
 	
 	polygon.clear()
 	_update_handles()

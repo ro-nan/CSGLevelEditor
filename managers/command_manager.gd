@@ -58,7 +58,7 @@ class Command:
 func _ready() -> void:
 	print("Registering Commands...")
 	
-	commands.append(Command.new("Add Handle", "", add_handle_do, add_handle_undo, [KEY_Z]))
+	commands.append(Command.new("Add Handle", "", add_handle_do, add_handle_undo, [KEY_X]))
 	
 	print("DONE")
 
@@ -75,11 +75,11 @@ func add_handle_do(command : Command):
 			command.data["nodes"] = [n.add_handle()]
 
 func add_handle_undo(command : Command):
+	print(command.data)
 	if command.data.has("nodes"):
-		for i in command.data["nodes"]:
-			(i as Node).queue_free.call_deferred()
+		(command.data["nodes"].back() as Node).queue_free.call_deferred()
 	
-	command.data["nodes"].clear()
+		command.data["nodes"].pop_back()
 
 func _process(delta: float) -> void:
 	for i in commands:

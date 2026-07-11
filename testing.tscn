@@ -1,96 +1,29 @@
 [gd_scene format=3 uid="uid://1dr75yo6l5dt"]
 
-[ext_resource type="Script" uid="uid://wlffapkoaugx" path="res://addons/csg_builder/nodes/handle/classes/line_handle.gd" id="2_aim67"]
-[ext_resource type="Script" uid="uid://c702v4txw66j6" path="res://addons/csg_builder/nodes/csg/csg_extrusion.gd" id="4_0p3pm"]
+[ext_resource type="Script" uid="uid://da3hmg86u8106" path="res://addons/csg_builder/nodes/csg/classes/adv_csg_mesh.gd" id="2_aim67"]
 [ext_resource type="Script" uid="uid://d1a52k254l7co" path="res://addons/csg_builder/nodes/handle/classes/handle.gd" id="5_8loys"]
 
-[sub_resource type="Curve3D" id="Curve3D_aim67"]
-_data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0.7343466, 0, 6.197669, 0, 0, 0, 0, 0, 0, 2.4022, 0, -1.5325667, 0, 0, 0, 0, 0, 0, -1.0515711, 0, -2.9540405, 0, 0, 0, 0, 0, 0, -3.7104871, 0, -13.388862, 0, 0, 0, 0, 0, 0, 12.761055, 0, -5.9510107, 0, 0, 0, 0, 0, 0, 11.831172, 1.9073486e-06, -12.835556),
-"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0)
-}
-point_count = 6
+[sub_resource type="ArrayMesh" id="ArrayMesh_sdsh4"]
 
 [node name="Testing" type="Node3D" unique_id=1532231317]
 
-[node name="CSGExtrusion" type="CSGPolygon3D" parent="." unique_id=744226445]
-transform = Transform3D(-0.7072795, 0, 0.70693403, 0, 1, 0, -0.70693403, 0, -0.7072795, 0, 0, 0)
-polygon = PackedVector2Array(-0.4646298, -1.2490999, 1.0453647, -0.54158926, 1.6746862, 1.2687199, 0.6033945, 1.2581517, -0.0025205612, 0.5256516)
-mode = 2
-path_node = NodePath("/root/@EditorNode@18069/@Panel@14/@VBoxContainer@15/DockHSplitMain/@VBoxContainer@28/DockVSplitCenter/@VSplitContainer@70/@VBoxContainer@71/@EditorMainScreen@125/MainScreen/@CanvasItemEditor@9322/@VSplitContainer@9105/@HSplitContainer@9107/@HSplitContainer@9109/@Control@9110/@SubViewportContainer@9111/@SubViewport@9112/Testing/CSGExtrusion/PathHandle/@Path3D@27599")
-path_interval_type = 0
-path_interval = 1.0
-path_simplify_angle = 0.0
-path_rotation = 2
-path_rotation_accurate = false
-path_local = false
-path_continuous_u = true
-path_u_distance = 1.0
-path_joined = false
-script = ExtResource("4_0p3pm")
-metadata/_custom_type_script = "uid://c702v4txw66j6"
+[node name="Handle" type="Node3D" parent="." unique_id=2136040669]
+script = ExtResource("5_8loys")
+metadata/_custom_type_script = "uid://d1a52k254l7co"
 
-[node name="PathHandle" type="Node3D" parent="CSGExtrusion" unique_id=374713012]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4135455, 0, 0.4915889)
+[node name="Handle2" type="Node3D" parent="." unique_id=100180254]
+script = ExtResource("5_8loys")
+metadata/_custom_type_script = "uid://d1a52k254l7co"
+
+[node name="AdvancedCSGMesh" type="CSGMesh3D" parent="." unique_id=145584296]
+mesh = SubResource("ArrayMesh_sdsh4")
 script = ExtResource("2_aim67")
-metadata/_custom_type_script = "uid://wlffapkoaugx"
+metadata/_custom_type_script = "uid://da3hmg86u8106"
 
-[node name="@Path3D@27599" type="Path3D" parent="CSGExtrusion/PathHandle" unique_id=1401771341]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.9604645e-08, 0, 0)
-top_level = true
-curve = SubResource("Curve3D_aim67")
-
-[node name="Handle" type="Node3D" parent="CSGExtrusion/PathHandle" unique_id=348897974]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.314277, 0, -4.355939)
+[node name="Handle" type="Node3D" parent="AdvancedCSGMesh" unique_id=1023062739]
 script = ExtResource("5_8loys")
 metadata/_custom_type_script = "uid://d1a52k254l7co"
 
-[node name="Handle2" type="Node3D" parent="CSGExtrusion/PathHandle" unique_id=29362637]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0291487, 0, 2.290561)
-script = ExtResource("5_8loys")
-metadata/_custom_type_script = "uid://d1a52k254l7co"
-
-[node name="Handle3" type="Node3D" parent="CSGExtrusion/PathHandle" unique_id=1962741801]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.418521, 0, 0.85435194)
-script = ExtResource("5_8loys")
-metadata/_custom_type_script = "uid://d1a52k254l7co"
-
-[node name="Handle4" type="Node3D" parent="CSGExtrusion/PathHandle" unique_id=926667408]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.675848, 0, 6.355009)
-script = ExtResource("5_8loys")
-metadata/_custom_type_script = "uid://d1a52k254l7co"
-
-[node name="Handle5" type="Node3D" parent="CSGExtrusion/PathHandle" unique_id=364331811]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.2322063, 0, 12.738663)
-script = ExtResource("5_8loys")
-metadata/_custom_type_script = "uid://d1a52k254l7co"
-
-[node name="Handle6" type="Node3D" parent="CSGExtrusion/PathHandle" unique_id=933344883]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.29240048, 1.9073486e-06, 16.950594)
-script = ExtResource("5_8loys")
-metadata/_custom_type_script = "uid://d1a52k254l7co"
-
-[node name="Handle" type="Node3D" parent="CSGExtrusion" unique_id=131524796]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4646298, -1.2490999, 0)
-script = ExtResource("5_8loys")
-metadata/_custom_type_script = "uid://d1a52k254l7co"
-
-[node name="Handle2" type="Node3D" parent="CSGExtrusion" unique_id=394778245]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0453647, -0.54158926, -0.1705642)
-script = ExtResource("5_8loys")
-metadata/_custom_type_script = "uid://d1a52k254l7co"
-
-[node name="Handle3" type="Node3D" parent="CSGExtrusion" unique_id=1768274221]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6746862, 1.2687199, 0)
-script = ExtResource("5_8loys")
-metadata/_custom_type_script = "uid://d1a52k254l7co"
-
-[node name="Handle5" type="Node3D" parent="CSGExtrusion" unique_id=1323030745]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6033945, 1.2581517, 0)
-script = ExtResource("5_8loys")
-metadata/_custom_type_script = "uid://d1a52k254l7co"
-
-[node name="Handle4" type="Node3D" parent="CSGExtrusion" unique_id=320129368]
-transform = Transform3D(0.46993384, 0, 0.88270164, 0, 1, 0, -0.88270164, 0, 0.46993384, -0.0025205612, 0.5256516, -0.018209726)
+[node name="Handle2" type="Node3D" parent="AdvancedCSGMesh" unique_id=1001201829]
 script = ExtResource("5_8loys")
 metadata/_custom_type_script = "uid://d1a52k254l7co"
