@@ -10,7 +10,7 @@ func _ready() -> void:
 func create_handles_square():
 	if get_child_count() == 0:
 		for i in range(8):
-			var handle = add_handle()
+			var handle = _add_handle()
 			handle.position = Vector3((i % 2) * 2 - 1, (i / 2) % 2 * 2 - 1, (i / 4) * 2 - 1)
 	
 	mesh = ArrayMesh.new()
@@ -38,7 +38,7 @@ func _update_handles():
 	pass
 
 # Controller Calls
-func add_handle() -> Handle:
+func _add_handle() -> Handle:
 	var handle = SculptHandle.new()
 	add_child(handle)
 	handle.owner = get_tree().edited_scene_root
