@@ -60,7 +60,7 @@ func _update_handles():
 		mdt.set_vertex(j, final_pos)
 	
 	for i in handles:
-		if not i is SculptHandle:
+		if not i is SculptHandle and not (i is Handle and i in handles.slice(0, 8)):
 			continue
 			
 		var r = range(mdt.get_vertex_count()).map(func(x): return mdt.get_vertex(x))
@@ -76,7 +76,12 @@ func _update_handles():
 			var v = mdt.get_vertex(j)
 			var d = v.distance_to(target_point)
 			
-			if is_instance_valid(i) and d < (i as Handle).max_effect_range:
+			if is_instance_valid(i) and i is Handle:
+				if d < 0.1:
+					mdt.set_vertex(j, 
+						i.position
+					)
+			elif is_instance_valid(i) and d < (i as Handle).max_effect_range:
 				var weight = (i as Handle).get_point_effect(d)
 				mdt.set_vertex(j, 
 					Vector3(v.x, v.y, v.z) * (1.0 - weight) + i.position * weight

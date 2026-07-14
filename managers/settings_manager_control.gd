@@ -6,11 +6,11 @@ extends Control
 func _ready() -> void:
 	pass # Replace with function body.
 
-@onready var h_split_container: HSplitContainer = $HSplitContainer
-@onready var grid_size: SpinBox = $HSplitContainer/R/GridSize
+@onready var main_settings: HSplitContainer = $VBoxContainer/MainSettings
+@onready var grid_size: SpinBox = $VBoxContainer/MainSettings/R/GridSize
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	h_split_container.split_offset = size.x / 2.0
+	main_settings.split_offset = size.x / 2.0
 	
 	SettingsManager.tile_size = grid_size.value
