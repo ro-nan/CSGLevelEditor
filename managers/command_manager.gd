@@ -70,9 +70,9 @@ func add_handle_do(command : Command):
 		n = n as AdvancedCSGMesh
 		
 		if command.data.has("nodes"):
-			command.data["nodes"].append(n.add_handle())
+			command.data["nodes"].append(n.add_handle(Vector3()))
 		else:
-			command.data["nodes"] = [n.add_handle()]
+			command.data["nodes"] = [n.add_handle(Vector3())]
 
 func add_handle_undo(command : Command):
 	print(command.data)
@@ -104,3 +104,7 @@ var current_frame_button_event_indicies : Array :
 
 func pass_input_event(event : InputEvent):
 	current_frame_input_events.append(event)
+
+func _input(event: InputEvent) -> void:
+	if event is InputEventKey or event is InputEventMouseButton:
+		pass_input_event(event)

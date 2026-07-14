@@ -8,11 +8,17 @@ func _ready() -> void:
 
 func create_handles_square():
 	if get_child_count() == 0:
-		add_handle()
-		for i in range(4):
-			var handle = add_handle()
-			handle.position = Vector3((i % 2) * 2, ((i + 1) % 2) * 2, 0.0) #BUG: Doesn't put them in the right order
-	
+		add_handle(Vector3())
+		var positions = [
+			Vector3(0, 0, 0), # lower left
+			Vector3(2, 0, 0), # lower right
+			Vector3(2, 2, 0), # upper right
+			Vector3(0, 2, 0)  # upper left
+		]
+		for pos in positions:
+			var handle = add_handle(pos)
+			handle.position = pos
+
 	polygon.clear()
 	_update_handles()
 
@@ -37,13 +43,12 @@ func _process(_delta: float) -> void:
 func _update_handles():
 	pass
 
-# Controller Calls
-func add_handle() -> Handle:
+func add_handle(pos: Vector3) -> Handle:
 	var handle = Handle.new()
 	add_child(handle)
 	handle.owner = get_tree().edited_scene_root
 	handle.name = "Handle"
-	handle.global_position = global_position if len(handles) < 2 else (handles[len(handles)-2].global_position + handles[len(handles)-1].global_position) / 2.0
-	handles.append(self)
+	handle.position = pos
+	handles.append(handle)
 	return handle
 	

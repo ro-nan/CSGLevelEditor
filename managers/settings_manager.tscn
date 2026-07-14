@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://vpscptfisj76"]
+
+[ext_resource type="Script" uid="uid://xq4qegt33385" path="res://addons/csg_builder/managers/settings_manager.gd" id="1_gis5h"]
+
+[node name="SettingsManager" type="Node" unique_id=957184965]
+script = ExtResource("1_gis5h")

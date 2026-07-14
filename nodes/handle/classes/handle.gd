@@ -10,3 +10,9 @@ func _ready() -> void:
 	add_child(label)
 	label.text = name.remove_chars("Handle")
 	label.billboard = BaseMaterial3D.BILLBOARD_ENABLED
+
+func handle_process(delta : float) -> void:
+	global_position = lerp(global_position, round(global_position / SettingsManager.tile_size) * SettingsManager.tile_size, delta * 30)
+
+func _process(delta: float) -> void:
+	handle_process(delta)

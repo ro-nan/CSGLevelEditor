@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://doxa17lh7r378"]
+
+[ext_resource type="Script" uid="uid://cuwrkp737kkal" path="res://addons/csg_builder/managers/settings_manager_control.gd" id="2_s0e5c"]
+
+[node name="Control" type="Control" unique_id=1113952515]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_s0e5c")
+
+[node name="HSplitContainer" type="HSplitContainer" parent="." unique_id=1128043065]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+split_offsets = PackedInt32Array(576)
+split_offset = 576
+
+[node name="L" type="VBoxContainer" parent="HSplitContainer" unique_id=701097898]
+layout_mode = 2
+
+[node name="GridSizeLabel" type="Label" parent="HSplitContainer/L" unique_id=829345716]
+layout_mode = 2
+text = "Grid Size"
+
+[node name="R" type="VBoxContainer" parent="HSplitContainer" unique_id=41728526]
+layout_mode = 2
+
+[node name="GridSize" type="SpinBox" parent="HSplitContainer/R" unique_id=1162463545]
+layout_mode = 2
+min_value = 0.5
+step = 0.05
+value = 0.5
+alignment = 2

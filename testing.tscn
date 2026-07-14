@@ -1,99 +1,31 @@
-[gd_scene format=4 uid="uid://1dr75yo6l5dt"]
+[gd_scene format=3 uid="uid://1dr75yo6l5dt"]
 
-[ext_resource type="Script" uid="uid://c6axrfnvrpv03" path="res://addons/csg_builder/nodes/csg/csg_wall.gd" id="1_sdsh4"]
-[ext_resource type="Script" uid="uid://dta868k00y1sm" path="res://addons/csg_builder/nodes/handle/sculpt_handle.gd" id="2_aim67"]
 [ext_resource type="Script" uid="uid://d1a52k254l7co" path="res://addons/csg_builder/nodes/handle/classes/handle.gd" id="5_8loys"]
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_aim67"]
-_surfaces = [{
-"aabb": AABB(-1.2679675, 0.16669999, 0.5, 1.1012675, 0.8333, 0.65249443),
-"format": 34359738369,
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 6,
-"vertex_data": PackedByteArray("wkyivwAAgD/whJM/Z7MqvgAAAD8AAAA/AAAAv2ezKj4AAAA/Z7MqvgAAAD8AAAA/Z7MqvmezKj4AAAA/AAAAv2ezKj4AAAA/")
-}, {
-"aabb": AABB(0.16669999, 0.16669999, -1.4649974, 1.3938977, 0.82268405, 0.9649974),
-"format": 34359738369,
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 6,
-"vertex_data": PackedByteArray("qsHHP0ZIfT8Jhbu/Z7MqPgAAAD8AAAC/AAAAP2ezKj4AAAC/Z7MqPgAAAD8AAAC/Z7MqPmezKj4AAAC/AAAAP2ezKj4AAAC/")
-}, {
-"aabb": AABB(-0.16669999, 0.16669999, 0.5, 0.33339998, 0.3333, 1e-05),
-"format": 34359738369,
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 6,
-"vertex_data": PackedByteArray("Z7MqvgAAAD8AAAA/Z7MqPgAAAD8AAAA/Z7MqvmezKj4AAAA/Z7MqPgAAAD8AAAA/Z7MqPmezKj4AAAA/Z7MqvmezKj4AAAA/")
-}, {
-"aabb": AABB(-0.16669999, 0.16669999, -0.5, 0.33339998, 0.3333, 1e-05),
-"format": 34359738369,
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 6,
-"vertex_data": PackedByteArray("Z7MqPgAAAD8AAAC/Z7MqvgAAAD8AAAC/Z7MqPmezKj4AAAC/Z7MqvgAAAD8AAAC/Z7MqvmezKj4AAAC/Z7MqPmezKj4AAAC/")
-}, {
-"aabb": AABB(0.16669999, 0.16669999, 0.5, 0.9847454, 0.8333001, 0.65138245),
-"format": 34359738369,
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 6,
-"vertex_data": PackedByteArray("Z7MqPgAAAD8AAAA/kGKTPwEAgD+AYJM/Z7MqPmezKj4AAAA/kGKTPwEAgD+AYJM/AAAAP2ezKj4AAAA/Z7MqPmezKj4AAAA/")
-}, {
-"aabb": AABB(-1.0523496, 0.16669999, -0.99999976, 0.88564956, 0.8126199, 0.49999976),
-"format": 34359738369,
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 6,
-"vertex_data": PackedByteArray("Z7MqvgAAAD8AAAC/ZLOGv7a0ej/8/3+/Z7MqvmezKj4AAAC/ZLOGv7a0ej/8/3+/AAAAv2ezKj4AAAC/Z7MqvmezKj4AAAC/")
-}]
-
-[sub_resource type="Curve" id="Curve_avvvv"]
+[ext_resource type="Script" uid="uid://c702v4txw66j6" path="res://addons/csg_builder/nodes/csg/csg_extrusion.gd" id="6_8loys"]
 
 [node name="Testing" type="Node3D" unique_id=1532231317]
 
-[node name="CSGWall" type="CSGMesh3D" parent="." unique_id=1547054981]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1511364, 0, 0)
-mesh = SubResource("ArrayMesh_aim67")
-script = ExtResource("1_sdsh4")
-subdivisions = 2
-metadata/_custom_type_script = "uid://c6axrfnvrpv03"
+[node name="CSGExtrusion" type="CSGPolygon3D" parent="." unique_id=32150549]
+polygon = PackedVector2Array(0, 0, 3.3999999, 0, 3.3999999, 3.3999999, 0, 3.3999999)
+depth = 5.1
+script = ExtResource("6_8loys")
+metadata/_custom_type_script = "uid://c702v4txw66j6"
 
-[node name="Handle" type="Node3D" parent="CSGWall" unique_id=1628101198]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2749733, -1, -1.4441001)
+[node name="Handle" type="Node3D" parent="CSGExtrusion" unique_id=1949284235]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6999999, 0, -5.1)
 script = ExtResource("5_8loys")
 
-[node name="Handle2" type="Node3D" parent="CSGWall" unique_id=2085341632]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4448376, -1.0000002, -1.3709879)
+[node name="Handle2" type="Node3D" parent="CSGExtrusion" unique_id=1830907426]
 script = ExtResource("5_8loys")
 
-[node name="Handle3" type="Node3D" parent="CSGWall" unique_id=651789751]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0523496, 0.97931993, -0.99999976)
+[node name="Handle3" type="Node3D" parent="CSGExtrusion" unique_id=2013623847]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.3999999, 0, 0)
 script = ExtResource("5_8loys")
 
-[node name="Handle4" type="Node3D" parent="CSGWall" unique_id=346284932]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5605977, 0.98938406, -1.4649974)
+[node name="Handle4" type="Node3D" parent="CSGExtrusion" unique_id=2092089049]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.3999999, 3.3999999, 0)
 script = ExtResource("5_8loys")
 
-[node name="Handle5" type="Node3D" parent="CSGWall" unique_id=1210852696]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7652907, -1, 0.6619804)
+[node name="Handle5" type="Node3D" parent="CSGExtrusion" unique_id=2093357144]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.3999999, 0)
 script = ExtResource("5_8loys")
-
-[node name="Handle6" type="Node3D" parent="CSGWall" unique_id=1842802704]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4861116, -0.99999976, 1.5884744)
-script = ExtResource("5_8loys")
-
-[node name="Handle7" type="Node3D" parent="CSGWall" unique_id=1088132988]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2679675, 1, 1.1524944)
-script = ExtResource("5_8loys")
-
-[node name="Handle8" type="Node3D" parent="CSGWall" unique_id=1858385949]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1514454, 1.0000001, 1.1513824)
-script = ExtResource("5_8loys")
-
-[node name="SculptHandle" type="Node3D" parent="CSGWall" unique_id=438683957]
-transform = Transform3D(0.49341485, 0.8088714, -0.31979525, -0.40077412, 0.5377385, 0.7417665, 0.7719599, -0.2378329, 0.5895029, 1.734788, 0, -0.13634539)
-script = ExtResource("2_aim67")
-effect_curve = SubResource("Curve_avvvv")
-metadata/_custom_type_script = "uid://dta868k00y1sm"
