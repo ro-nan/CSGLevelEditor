@@ -21,7 +21,7 @@ enum VALUE_MODE {
 func _ready() -> void:
 	pass
 
-func _process(delta: float) -> void:
+func _constraint_process(delta: float) -> void:
 	if not is_instance_valid(target):
 		return
 	

@@ -1,5 +1,5 @@
 @tool
-class_name MirrorOverPoint extends Constraint
+class_name MirrorOverPointConstraint extends Constraint
 
 @export var target_point : Node3D
 
@@ -11,6 +11,6 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _constraint_process(delta: float) -> void:
 	if is_instance_valid(target_point) and is_instance_valid(mirror_point):
 		parent.position = mirror_point.global_position - target_point.global_position

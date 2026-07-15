@@ -84,27 +84,27 @@ func add_handle_undo(command : Command):
 func _process(delta: float) -> void:
 	for i in commands:
 		var t_ln = 0
-		for x in i.input_combo:
-			if x in current_frame_button_event_indicies:
-				t_ln += 1
-		
-		if t_ln == len(i.input_combo):
+		if i.input_combo == current_frame_button_event_indicies:
 			i.do()
 	
-	current_frame_input_events.clear()
+	for i in current_frame_input_events:
+		if not i.is_pressed():
+			for a in current_frame_input_events.filter(func(x): return x.keycode == i.keycode):
+				current_frame_input_events.pop_at(current_frame_input_events.find(a))
+	
+	current_frame_input_events_mouse.clear()
 
 var current_frame_input_events : Array[InputEvent]
+var current_frame_input_events_mouse : Array[InputEvent]
 var current_frame_mouse_event_indicies : Array :
 	get():
-		return CommandManager.current_frame_input_events.filter(func(x): return x is InputEventMouseButton).map(func(x): return x.button_index)
+		return CommandManager.current_frame_input_events_mouse.filter(func(x): return x is InputEventMouseButton).map(func(x): return x.button_index)
 var current_frame_button_event_indicies : Array :
 	get():
-		return CommandManager.current_frame_input_events.filter(func(x): return x is InputEventKey).filter(func(x): return x.pressed == false).map(func(x): return x.keycode)
-
-
-func pass_input_event(event : InputEvent):
-	current_frame_input_events.append(event)
+		return CommandManager.current_frame_input_events.filter(func(x): return x is InputEventKey).map(func(x): return x.keycode)
 
 func _input(event: InputEvent) -> void:
-	if event is InputEventKey or event is InputEventMouseButton:
-		pass_input_event(event)
+	if event is InputEventKey:
+		current_frame_input_events.append(event)
+	elif event is InputEventMouseButton:
+		current_frame_input_events_mouse.append(event)

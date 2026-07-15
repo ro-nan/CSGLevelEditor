@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://dryyoi7p42ke8"]
+
+[ext_resource type="Script" uid="uid://d1a52k254l7co" path="res://addons/csg_builder/nodes/handle/classes/handle.gd" id="1_1dra3"]
+
+[node name="Playground1" type="Node3D" unique_id=898340550]
+
+[node name="Handle" type="Node3D" parent="." unique_id=747880594]
+script = ExtResource("1_1dra3")
+metadata/_custom_type_script = "uid://d1a52k254l7co"

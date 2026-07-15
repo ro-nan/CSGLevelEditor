@@ -11,6 +11,6 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _constraint_process(delta: float) -> void:
 	if is_instance_valid(target):
 		parent.look_at(target.global_position, up, use_mdl_front)
