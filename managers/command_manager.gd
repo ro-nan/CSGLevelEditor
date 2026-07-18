@@ -56,6 +56,7 @@ class Command:
 		return o
 
 func _ready() -> void:
+	if not Engine.is_editor_hint(): return
 	print("Registering Commands...")
 	
 	commands.append(Command.new("Add Handle", "", add_handle_do, add_handle_undo, [KEY_X]))
@@ -82,6 +83,7 @@ func add_handle_undo(command : Command):
 		command.data["nodes"].pop_back()
 
 func _process(delta: float) -> void:
+	if not Engine.is_editor_hint(): return
 	for i in commands:
 		var t_ln = 0
 		if i.input_combo == current_frame_button_event_indicies:
@@ -104,6 +106,7 @@ var current_frame_button_event_indicies : Array :
 		return CommandManager.current_frame_input_events.filter(func(x): return x is InputEventKey).map(func(x): return x.keycode)
 
 func _input(event: InputEvent) -> void:
+	if not Engine.is_editor_hint(): return
 	if event is InputEventKey:
 		current_frame_input_events.append(event)
 	elif event is InputEventMouseButton:

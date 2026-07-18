@@ -1,9 +1,402 @@
 [gd_scene format=3 uid="uid://dryyoi7p42ke8"]
 
 [ext_resource type="Script" uid="uid://d1a52k254l7co" path="res://addons/csg_builder/nodes/handle/classes/handle.gd" id="1_1dra3"]
+[ext_resource type="Script" uid="uid://clecahkpvb7jd" path="res://addons/csg_builder/nodes/csg/advanced_multimesh_placer.gd" id="2_bgv5t"]
+[ext_resource type="Script" uid="uid://dta868k00y1sm" path="res://addons/csg_builder/nodes/handle/sculpt_handle.gd" id="3_2u2lu"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_2u2lu"]
+
+[sub_resource type="MultiMesh" id="MultiMesh_2u2lu"]
+transform_format = 1
+instance_count = 72
+mesh = SubResource("BoxMesh_2u2lu")
+buffer = PackedFloat32Array(1, 0, 0, -8.5, 0, 1, 0, 1.8883605, 0, 0, 1, -1, 1, 0, 0, -6.5, 0, 1, 0, 1.8883605, 0, 0, 1, -1, 1, 0, 0, -8.5, 0, 1, 0, 3.8883605, 0, 0, 1, -1, 1, 0, 0, -6.5, 0, 1, 0, 3.8883605, 0, 0, 1, -1, 1, 0, 0, -8.5, 0, 1, 0, 1.8883605, 0, 0, 1, 1, 1, 0, 0, -6.5, 0, 1, 0, 1.8883605, 0, 0, 1, 1, 1, 0, 0, -8.5, 0, 1, 0, 3.8883605, 0, 0, 1, 1, 1, 0, 0, -6.5, 0, 1, 0, 3.8883605, 0, 0, 1, 1, 1, 0, 0, -12.5, 0, 1, 0, 1.8883605, 0, 0, 1, -1, 1, 0, 0, -10.5, 0, 1, 0, 1.8883605, 0, 0, 1, -1, 1, 0, 0, -12.5, 0, 1, 0, 3.8883605, 0, 0, 1, -1, 1, 0, 0, -10.5, 0, 1, 0, 3.8883605, 0, 0, 1, -1, 1, 0, 0, -12.5, 0, 1, 0, 1.8883605, 0, 0, 1, 1, 1, 0, 0, -10.5, 0, 1, 0, 1.8883605, 0, 0, 1, 1, 1, 0, 0, -12.5, 0, 1, 0, 3.8883605, 0, 0, 1, 1, 1, 0, 0, -10.5, 0, 1, 0, 3.8883605, 0, 0, 1, 1, 1, 0, 0, -12.5, 0, 1, 0, 1.8883605, 0, 0, 1, 3.5, 1, 0, 0, -10.5, 0, 1, 0, 1.8883605, 0, 0, 1, 3.5, 1, 0, 0, -12.5, 0, 1, 0, 3.8883605, 0, 0, 1, 3.5, 1, 0, 0, -10.5, 0, 1, 0, 3.8883605, 0, 0, 1, 3.5, 1, 0, 0, -12.5, 0, 1, 0, 1.8883605, 0, 0, 1, 5.5, 1, 0, 0, -10.5, 0, 1, 0, 1.8883605, 0, 0, 1, 5.5, 1, 0, 0, -12.5, 0, 1, 0, 3.8883605, 0, 0, 1, 5.5, 1, 0, 0, -10.5, 0, 1, 0, 3.8883605, 0, 0, 1, 5.5, 1, 0, 0, -8.5, 0, 1, 0, 1.8883605, 0, 0, 1, 3.5, 1, 0, 0, -6.5, 0, 1, 0, 1.8883605, 0, 0, 1, 3.5, 1, 0, 0, -8.5, 0, 1, 0, 3.8883605, 0, 0, 1, 3.5, 1, 0, 0, -6.5, 0, 1, 0, 3.8883605, 0, 0, 1, 3.5, 1, 0, 0, -8.5, 0, 1, 0, 1.8883605, 0, 0, 1, 5.5, 1, 0, 0, -6.5, 0, 1, 0, 1.8883605, 0, 0, 1, 5.5, 1, 0, 0, -8.5, 0, 1, 0, 3.8883605, 0, 0, 1, 5.5, 1, 0, 0, -6.5, 0, 1, 0, 3.8883605, 0, 0, 1, 5.5, 1, 0, 0, -4.5, 0, 1, 0, 1.8883605, 0, 0, 1, 3.5, 1, 0, 0, -2.5, 0, 1, 0, 1.8883605, 0, 0, 1, 3.5, 1, 0, 0, -4.5, 0, 1, 0, 3.8883605, 0, 0, 1, 3.5, 1, 0, 0, -2.5, 0, 1, 0, 3.8883605, 0, 0, 1, 3.5, 1, 0, 0, -4.5, 0, 1, 0, 1.8883605, 0, 0, 1, 5.5, 1, 0, 0, -2.5, 0, 1, 0, 1.8883605, 0, 0, 1, 5.5, 1, 0, 0, -4.5, 0, 1, 0, 3.8883605, 0, 0, 1, 5.5, 1, 0, 0, -2.5, 0, 1, 0, 3.8883605, 0, 0, 1, 5.5, 1, 0, 0, -4.5, 0, 1, 0, 1.8883605, 0, 0, 1, -1, 1, 0, 0, -2.5, 0, 1, 0, 1.8883605, 0, 0, 1, -1, 1, 0, 0, -4.5, 0, 1, 0, 3.8883605, 0, 0, 1, -1, 1, 0, 0, -2.5, 0, 1, 0, 3.8883605, 0, 0, 1, -1, 1, 0, 0, -4.5, 0, 1, 0, 1.8883605, 0, 0, 1, 1, 1, 0, 0, -2.5, 0, 1, 0, 1.8883605, 0, 0, 1, 1, 1, 0, 0, -4.5, 0, 1, 0, 3.8883605, 0, 0, 1, 1, 1, 0, 0, -2.5, 0, 1, 0, 3.8883605, 0, 0, 1, 1, 1, 0, 0, -4.5, 0, 1, 0, 1.8883605, 0, 0, 1, -6, 1, 0, 0, -2.5, 0, 1, 0, 1.8883605, 0, 0, 1, -6, 1, 0, 0, -4.5, 0, 1, 0, 3.8883605, 0, 0, 1, -6, 1, 0, 0, -2.5, 0, 1, 0, 3.8883605, 0, 0, 1, -6, 1, 0, 0, -4.5, 0, 1, 0, 1.8883605, 0, 0, 1, -4, 1, 0, 0, -2.5, 0, 1, 0, 1.8883605, 0, 0, 1, -4, 1, 0, 0, -4.5, 0, 1, 0, 3.8883605, 0, 0, 1, -4, 1, 0, 0, -2.5, 0, 1, 0, 3.8883605, 0, 0, 1, -4, 1, 0, 0, -9, 0, 1, 0, 1.8883605, 0, 0, 1, -6, 1, 0, 0, -7, 0, 1, 0, 1.8883605, 0, 0, 1, -6, 1, 0, 0, -9, 0, 1, 0, 3.8883605, 0, 0, 1, -6, 1, 0, 0, -7, 0, 1, 0, 3.8883605, 0, 0, 1, -6, 1, 0, 0, -9, 0, 1, 0, 1.8883605, 0, 0, 1, -4, 1, 0, 0, -7, 0, 1, 0, 1.8883605, 0, 0, 1, -4, 1, 0, 0, -9, 0, 1, 0, 3.8883605, 0, 0, 1, -4, 1, 0, 0, -7, 0, 1, 0, 3.8883605, 0, 0, 1, -4, 1, 0, 0, -13, 0, 1, 0, 1.8883605, 0, 0, 1, -6, 1, 0, 0, -11, 0, 1, 0, 1.8883605, 0, 0, 1, -6, 1, 0, 0, -13, 0, 1, 0, 3.8883605, 0, 0, 1, -6, 1, 0, 0, -11, 0, 1, 0, 3.8883605, 0, 0, 1, -6, 1, 0, 0, -13, 0, 1, 0, 1.8883605, 0, 0, 1, -4, 1, 0, 0, -11, 0, 1, 0, 1.8883605, 0, 0, 1, -4, 1, 0, 0, -13, 0, 1, 0, 3.8883605, 0, 0, 1, -4, 1, 0, 0, -11, 0, 1, 0, 3.8883605, 0, 0, 1, -4)
+
+[sub_resource type="Curve" id="Curve_ml4yi"]
+
+[sub_resource type="Curve" id="Curve_1dra3"]
+
+[sub_resource type="Curve" id="Curve_4wpfn"]
+
+[sub_resource type="Curve" id="Curve_6nyqv"]
+
+[sub_resource type="Curve" id="Curve_dnl6c"]
+
+[sub_resource type="Curve" id="Curve_rdwqy"]
+
+[sub_resource type="Curve" id="Curve_v2ryw"]
+
+[sub_resource type="Curve" id="Curve_o5rwy"]
 
 [node name="Playground1" type="Node3D" unique_id=898340550]
 
 [node name="Handle" type="Node3D" parent="." unique_id=747880594]
 script = ExtResource("1_1dra3")
 metadata/_custom_type_script = "uid://d1a52k254l7co"
+
+[node name="AdvancedMultimeshPlacer" type="MultiMeshInstance3D" parent="." unique_id=1109143012]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1116395, 0)
+multimesh = SubResource("MultiMesh_2u2lu")
+script = ExtResource("2_bgv5t")
+mesh = SubResource("BoxMesh_2u2lu")
+metadata/_custom_type_script = "uid://clecahkpvb7jd"
+
+[node name="SculptHandle" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=966125455]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.5, 1.8883605, -1)
+script = ExtResource("3_2u2lu")
+effect_curve = SubResource("Curve_ml4yi")
+
+[node name="SculptHandle2" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1738262246]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 1.8883605, -1)
+script = ExtResource("3_2u2lu")
+effect_curve = SubResource("Curve_1dra3")
+
+[node name="SculptHandle3" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=365951847]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.5, 3.8883605, -1)
+script = ExtResource("3_2u2lu")
+effect_curve = SubResource("Curve_4wpfn")
+
+[node name="SculptHandle4" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1324892248]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 3.8883605, -1)
+script = ExtResource("3_2u2lu")
+effect_curve = SubResource("Curve_6nyqv")
+
+[node name="SculptHandle5" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1935940532]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.5, 1.8883605, 1)
+script = ExtResource("3_2u2lu")
+effect_curve = SubResource("Curve_dnl6c")
+
+[node name="SculptHandle6" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1472555825]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 1.8883605, 1)
+script = ExtResource("3_2u2lu")
+effect_curve = SubResource("Curve_rdwqy")
+
+[node name="SculptHandle7" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=123781517]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.5, 3.8883605, 1)
+script = ExtResource("3_2u2lu")
+effect_curve = SubResource("Curve_v2ryw")
+
+[node name="SculptHandle8" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1573325962]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 3.8883605, 1)
+script = ExtResource("3_2u2lu")
+effect_curve = SubResource("Curve_o5rwy")
+
+[node name="SculptHandle9" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=583293190]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5, 1.8883605, -1)
+script = ExtResource("3_2u2lu")
+effect_curve = SubResource("Curve_ml4yi")
+
+[node name="SculptHandle10" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=382046952]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5, 1.8883605, -1)
+script = ExtResource("3_2u2lu")
+effect_curve = SubResource("Curve_1dra3")
+
+[node name="SculptHandle11" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=432011142]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5, 3.8883605, -1)
+script = ExtResource("3_2u2lu")
+effect_curve = SubResource("Curve_4wpfn")
+
+[node name="SculptHandle12" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1486940837]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5, 3.8883605, -1)
+script = ExtResource("3_2u2lu")
+effect_curve = SubResource("Curve_6nyqv")
+
+[node name="SculptHandle13" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1191041105]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5, 1.8883605, 1)
+script = ExtResource("3_2u2lu")
+effect_curve = SubResource("Curve_dnl6c")
+
+[node name="SculptHandle14" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=921533475]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5, 1.8883605, 1)
+script = ExtResource("3_2u2lu")
+effect_curve = SubResource("Curve_rdwqy")
+
+[node name="SculptHandle15" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=714650317]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5, 3.8883605, 1)
+script = ExtResource("3_2u2lu")
+effect_curve = SubResource("Curve_v2ryw")
+
+[node name="SculptHandle16" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=633547896]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5, 3.8883605, 1)
+script = ExtResource("3_2u2lu")
+effect_curve = SubResource("Curve_o5rwy")
+
+[node name="SculptHandle17" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=290241898]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5, 1.8883605, 3.5)
+script = ExtResource("3_2u2lu")
+effect_curve = SubResource("Curve_ml4yi")
+
+[node name="SculptHandle18" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=575608116]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5, 1.8883605, 3.5)
+script = ExtResource("3_2u2lu")
+effect_curve = SubResource("Curve_1dra3")
+
+[node name="SculptHandle19" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=10280607]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5, 3.8883605, 3.5)
+script = ExtResource("3_2u2lu")
+effect_curve = SubResource("Curve_4wpfn")
+
+[node name="SculptHandle20" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=978100004]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5, 3.8883605, 3.5)
+script = ExtResource("3_2u2lu")
+effect_curve = SubResource("Curve_6nyqv")
+
+[node name="SculptHandle21" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=91379945]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5, 1.8883605, 5.5)
+script = ExtResource("3_2u2lu")
+effect_curve = SubResource("Curve_dnl6c")
+
+[node name="SculptHandle22" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1269291029]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5, 1.8883605, 5.5)
+script = ExtResource("3_2u2lu")
+effect_curve = SubResource("Curve_rdwqy")
+
+[node name="SculptHandle23" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=993797522]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5, 3.8883605, 5.5)
+script = ExtResource("3_2u2lu")
+effect_curve = SubResource("Curve_v2ryw")
+
+[node name="SculptHandle24" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1726823927]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5, 3.8883605, 5.5)
+script = ExtResource("3_2u2lu")
+effect_curve = SubResource("Curve_o5rwy")
+
+[node name="SculptHandle25" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=875496667]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.5, 1.8883605, 3.5)
+script = ExtResource("3_2u2lu")
+effect_curve = SubResource("Curve_ml4yi")
+
+[node name="SculptHandle26" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1824578456]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 1.8883605, 3.5)
+script = ExtResource("3_2u2lu")
+effect_curve = SubResource("Curve_1dra3")
+
+[node name="SculptHandle27" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1674539172]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.5, 3.8883605, 3.5)
+script = ExtResource("3_2u2lu")
+effect_curve = SubResource("Curve_4wpfn")
+
+[node name="SculptHandle28" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=206340355]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 3.8883605, 3.5)
+script = ExtResource("3_2u2lu")
+effect_curve = SubResource("Curve_6nyqv")
+
+[node name="SculptHandle29" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=611670010]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.5, 1.8883605, 5.5)
+script = ExtResource("3_2u2lu")
+effect_curve = SubResource("Curve_dnl6c")
+
+[node name="SculptHandle30" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1977251836]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 1.8883605, 5.5)
+script = ExtResource("3_2u2lu")
+effect_curve = SubResource("Curve_rdwqy")
+
+[node name="SculptHandle31" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1374902544]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.5, 3.8883605, 5.5)
+script = ExtResource("3_2u2lu")
+effect_curve = SubResource("Curve_v2ryw")
+
+[node name="SculptHandle32" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=903189579]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 3.8883605, 5.5)
+script = ExtResource("3_2u2lu")
+effect_curve = SubResource("Curve_o5rwy")
+
+[node name="SculptHandle33" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=487623408]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 1.8883605, 3.5)
+script = ExtResource("3_2u2lu")
+effect_curve = SubResource("Curve_ml4yi")
+
+[node name="SculptHandle34" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=290928426]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 1.8883605, 3.5)
+script = ExtResource("3_2u2lu")
+effect_curve = SubResource("Curve_1dra3")
+
+[node name="SculptHandle35" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1209881971]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 3.8883605, 3.5)
+script = ExtResource("3_2u2lu")
+effect_curve = SubResource("Curve_4wpfn")
+
+[node name="SculptHandle36" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=727320311]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 3.8883605, 3.5)
+script = ExtResource("3_2u2lu")
+effect_curve = SubResource("Curve_6nyqv")
+
+[node name="SculptHandle37" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=280638190]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 1.8883605, 5.5)
+script = ExtResource("3_2u2lu")
+effect_curve = SubResource("Curve_dnl6c")
+
+[node name="SculptHandle38" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=630232883]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 1.8883605, 5.5)
+script = ExtResource("3_2u2lu")
+effect_curve = SubResource("Curve_rdwqy")
+
+[node name="SculptHandle39" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1206241282]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 3.8883605, 5.5)
+script = ExtResource("3_2u2lu")
+effect_curve = SubResource("Curve_v2ryw")
+
+[node name="SculptHandle40" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1993539045]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 3.8883605, 5.5)
+script = ExtResource("3_2u2lu")
+effect_curve = SubResource("Curve_o5rwy")
+
+[node name="SculptHandle41" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=47541113]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 1.8883605, -1)
+script = ExtResource("3_2u2lu")
+effect_curve = SubResource("Curve_ml4yi")
+
+[node name="SculptHandle42" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=131021585]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 1.8883605, -1)
+script = ExtResource("3_2u2lu")
+effect_curve = SubResource("Curve_1dra3")
+
+[node name="SculptHandle43" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=384234487]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 3.8883605, -1)
+script = ExtResource("3_2u2lu")
+effect_curve = SubResource("Curve_4wpfn")
+
+[node name="SculptHandle44" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=349913921]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 3.8883605, -1)
+script = ExtResource("3_2u2lu")
+effect_curve = SubResource("Curve_6nyqv")
+
+[node name="SculptHandle45" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=75094419]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 1.8883605, 1)
+script = ExtResource("3_2u2lu")
+effect_curve = SubResource("Curve_dnl6c")
+
+[node name="SculptHandle46" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1769730698]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 1.8883605, 1)
+script = ExtResource("3_2u2lu")
+effect_curve = SubResource("Curve_rdwqy")
+
+[node name="SculptHandle47" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=153160739]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 3.8883605, 1)
+script = ExtResource("3_2u2lu")
+effect_curve = SubResource("Curve_v2ryw")
+
+[node name="SculptHandle48" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1980142779]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 3.8883605, 1)
+script = ExtResource("3_2u2lu")
+effect_curve = SubResource("Curve_o5rwy")
+
+[node name="SculptHandle49" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1796221227]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 1.8883605, -6)
+script = ExtResource("3_2u2lu")
+effect_curve = SubResource("Curve_ml4yi")
+
+[node name="SculptHandle50" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=273977618]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 1.8883605, -6)
+script = ExtResource("3_2u2lu")
+effect_curve = SubResource("Curve_1dra3")
+
+[node name="SculptHandle51" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=271077600]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 3.8883605, -6)
+script = ExtResource("3_2u2lu")
+effect_curve = SubResource("Curve_4wpfn")
+
+[node name="SculptHandle52" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1333144389]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 3.8883605, -6)
+script = ExtResource("3_2u2lu")
+effect_curve = SubResource("Curve_6nyqv")
+
+[node name="SculptHandle53" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=229360329]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 1.8883605, -4)
+script = ExtResource("3_2u2lu")
+effect_curve = SubResource("Curve_dnl6c")
+
+[node name="SculptHandle54" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=196127213]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 1.8883605, -4)
+script = ExtResource("3_2u2lu")
+effect_curve = SubResource("Curve_rdwqy")
+
+[node name="SculptHandle55" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=61620517]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 3.8883605, -4)
+script = ExtResource("3_2u2lu")
+effect_curve = SubResource("Curve_v2ryw")
+
+[node name="SculptHandle56" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=935881115]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 3.8883605, -4)
+script = ExtResource("3_2u2lu")
+effect_curve = SubResource("Curve_o5rwy")
+
+[node name="SculptHandle57" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=579859642]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 1.8883605, -6)
+script = ExtResource("3_2u2lu")
+effect_curve = SubResource("Curve_ml4yi")
+
+[node name="SculptHandle58" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=733152035]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 1.8883605, -6)
+script = ExtResource("3_2u2lu")
+effect_curve = SubResource("Curve_1dra3")
+
+[node name="SculptHandle59" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=2006999181]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 3.8883605, -6)
+script = ExtResource("3_2u2lu")
+effect_curve = SubResource("Curve_4wpfn")
+
+[node name="SculptHandle60" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1363930633]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 3.8883605, -6)
+script = ExtResource("3_2u2lu")
+effect_curve = SubResource("Curve_6nyqv")
+
+[node name="SculptHandle61" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=186104929]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 1.8883605, -4)
+script = ExtResource("3_2u2lu")
+effect_curve = SubResource("Curve_dnl6c")
+
+[node name="SculptHandle62" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=788865400]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 1.8883605, -4)
+script = ExtResource("3_2u2lu")
+effect_curve = SubResource("Curve_rdwqy")
+
+[node name="SculptHandle63" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=713481123]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 3.8883605, -4)
+script = ExtResource("3_2u2lu")
+effect_curve = SubResource("Curve_v2ryw")
+
+[node name="SculptHandle64" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=74719418]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 3.8883605, -4)
+script = ExtResource("3_2u2lu")
+effect_curve = SubResource("Curve_o5rwy")
+
+[node name="SculptHandle65" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1732290403]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 1.8883605, -6)
+script = ExtResource("3_2u2lu")
+effect_curve = SubResource("Curve_ml4yi")
+
+[node name="SculptHandle66" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=965218447]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 1.8883605, -6)
+script = ExtResource("3_2u2lu")
+effect_curve = SubResource("Curve_1dra3")
+
+[node name="SculptHandle67" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1049842713]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 3.8883605, -6)
+script = ExtResource("3_2u2lu")
+effect_curve = SubResource("Curve_4wpfn")
+
+[node name="SculptHandle68" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=403572401]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 3.8883605, -6)
+script = ExtResource("3_2u2lu")
+effect_curve = SubResource("Curve_6nyqv")
+
+[node name="SculptHandle69" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1030974537]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 1.8883605, -4)
+script = ExtResource("3_2u2lu")
+effect_curve = SubResource("Curve_dnl6c")
+
+[node name="SculptHandle70" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=7644333]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 1.8883605, -4)
+script = ExtResource("3_2u2lu")
+effect_curve = SubResource("Curve_rdwqy")
+
+[node name="SculptHandle71" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1507148281]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 3.8883605, -4)
+script = ExtResource("3_2u2lu")
+effect_curve = SubResource("Curve_v2ryw")
+
+[node name="SculptHandle72" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=574702089]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 3.8883605, -4)
+script = ExtResource("3_2u2lu")
+effect_curve = SubResource("Curve_o5rwy")

@@ -1,5 +1,6 @@
 @tool
-class_name AdvancedCSGPolygon extends CSGPolygon3D
+class_name AdvancedMultimesh
+extends MultiMeshInstance3D
 
 var handles : Array = []
 
@@ -8,19 +9,10 @@ func _ready() -> void:
 
 func create_handles_square():
 	if get_child_count() == 0:
-		add_handle(Vector3())
-		var positions = [
-			Vector3(0, 0, 0), # lower left
-			Vector3(2, 0, 0), # lower right
-			Vector3(2, 2, 0), # upper right
-			Vector3(0, 2, 0)  # upper left
-		]
-		for pos in positions:
-			var handle = add_handle(pos)
-			handle.position = pos
-
-	polygon.clear()
-	handles = get_children(false).filter(func(x): return x is Handle)
+		for i in range(8):
+			var handle = _add_handle()
+			handle.position = Vector3((i % 2) * 2 - 1, (i / 2) % 2 * 2 - 1, (i / 4) * 2 - 1)
+	
 	_update_handles()
 
 var last_pos : Array = []
@@ -44,12 +36,13 @@ func _process(_delta: float) -> void:
 func _update_handles():
 	pass
 
-func add_handle(pos: Vector3) -> Handle:
+# Controller Calls
+func _add_handle() -> Handle:
 	var handle = Handle.new()
 	add_child(handle)
 	handle.owner = get_tree().edited_scene_root
 	handle.name = "Handle"
-	handle.position = pos
-	handles.append(handle)
+	handle.global_position = global_position if len(handles) < 2 else (handles[len(handles)-2].global_position + handles[len(handles)-1].global_position) / 2.0
+	handles.append(self)
 	return handle
 	
