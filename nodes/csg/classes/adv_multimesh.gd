@@ -21,7 +21,7 @@ func _process(_delta: float) -> void:
 	var updated_handles : Array = []
 	for child in get_children():
 		child = child as Handle
-		if child is Handle and "Handle" in child.name:
+		if child is Handle:
 			updated_handles.append(child)
 	
 	if updated_handles.map(func(x): return x.global_position) != last_pos:

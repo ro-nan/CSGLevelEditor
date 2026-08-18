@@ -2,31 +2,15 @@
 
 [ext_resource type="Script" uid="uid://d1a52k254l7co" path="res://addons/csg_builder/nodes/handle/classes/handle.gd" id="1_1dra3"]
 [ext_resource type="Script" uid="uid://clecahkpvb7jd" path="res://addons/csg_builder/nodes/csg/advanced_multimesh_placer.gd" id="2_bgv5t"]
-[ext_resource type="Script" uid="uid://dta868k00y1sm" path="res://addons/csg_builder/nodes/handle/sculpt_handle.gd" id="3_2u2lu"]
 
-[sub_resource type="BoxMesh" id="BoxMesh_2u2lu"]
+[sub_resource type="BoxMesh" id="BoxMesh_bgv5t"]
+size = Vector3(2, 2, 2)
 
 [sub_resource type="MultiMesh" id="MultiMesh_2u2lu"]
 transform_format = 1
-instance_count = 72
-mesh = SubResource("BoxMesh_2u2lu")
-buffer = PackedFloat32Array(1, 0, 0, -8.5, 0, 1, 0, 1.8883605, 0, 0, 1, -1, 1, 0, 0, -6.5, 0, 1, 0, 1.8883605, 0, 0, 1, -1, 1, 0, 0, -8.5, 0, 1, 0, 3.8883605, 0, 0, 1, -1, 1, 0, 0, -6.5, 0, 1, 0, 3.8883605, 0, 0, 1, -1, 1, 0, 0, -8.5, 0, 1, 0, 1.8883605, 0, 0, 1, 1, 1, 0, 0, -6.5, 0, 1, 0, 1.8883605, 0, 0, 1, 1, 1, 0, 0, -8.5, 0, 1, 0, 3.8883605, 0, 0, 1, 1, 1, 0, 0, -6.5, 0, 1, 0, 3.8883605, 0, 0, 1, 1, 1, 0, 0, -12.5, 0, 1, 0, 1.8883605, 0, 0, 1, -1, 1, 0, 0, -10.5, 0, 1, 0, 1.8883605, 0, 0, 1, -1, 1, 0, 0, -12.5, 0, 1, 0, 3.8883605, 0, 0, 1, -1, 1, 0, 0, -10.5, 0, 1, 0, 3.8883605, 0, 0, 1, -1, 1, 0, 0, -12.5, 0, 1, 0, 1.8883605, 0, 0, 1, 1, 1, 0, 0, -10.5, 0, 1, 0, 1.8883605, 0, 0, 1, 1, 1, 0, 0, -12.5, 0, 1, 0, 3.8883605, 0, 0, 1, 1, 1, 0, 0, -10.5, 0, 1, 0, 3.8883605, 0, 0, 1, 1, 1, 0, 0, -12.5, 0, 1, 0, 1.8883605, 0, 0, 1, 3.5, 1, 0, 0, -10.5, 0, 1, 0, 1.8883605, 0, 0, 1, 3.5, 1, 0, 0, -12.5, 0, 1, 0, 3.8883605, 0, 0, 1, 3.5, 1, 0, 0, -10.5, 0, 1, 0, 3.8883605, 0, 0, 1, 3.5, 1, 0, 0, -12.5, 0, 1, 0, 1.8883605, 0, 0, 1, 5.5, 1, 0, 0, -10.5, 0, 1, 0, 1.8883605, 0, 0, 1, 5.5, 1, 0, 0, -12.5, 0, 1, 0, 3.8883605, 0, 0, 1, 5.5, 1, 0, 0, -10.5, 0, 1, 0, 3.8883605, 0, 0, 1, 5.5, 1, 0, 0, -8.5, 0, 1, 0, 1.8883605, 0, 0, 1, 3.5, 1, 0, 0, -6.5, 0, 1, 0, 1.8883605, 0, 0, 1, 3.5, 1, 0, 0, -8.5, 0, 1, 0, 3.8883605, 0, 0, 1, 3.5, 1, 0, 0, -6.5, 0, 1, 0, 3.8883605, 0, 0, 1, 3.5, 1, 0, 0, -8.5, 0, 1, 0, 1.8883605, 0, 0, 1, 5.5, 1, 0, 0, -6.5, 0, 1, 0, 1.8883605, 0, 0, 1, 5.5, 1, 0, 0, -8.5, 0, 1, 0, 3.8883605, 0, 0, 1, 5.5, 1, 0, 0, -6.5, 0, 1, 0, 3.8883605, 0, 0, 1, 5.5, 1, 0, 0, -4.5, 0, 1, 0, 1.8883605, 0, 0, 1, 3.5, 1, 0, 0, -2.5, 0, 1, 0, 1.8883605, 0, 0, 1, 3.5, 1, 0, 0, -4.5, 0, 1, 0, 3.8883605, 0, 0, 1, 3.5, 1, 0, 0, -2.5, 0, 1, 0, 3.8883605, 0, 0, 1, 3.5, 1, 0, 0, -4.5, 0, 1, 0, 1.8883605, 0, 0, 1, 5.5, 1, 0, 0, -2.5, 0, 1, 0, 1.8883605, 0, 0, 1, 5.5, 1, 0, 0, -4.5, 0, 1, 0, 3.8883605, 0, 0, 1, 5.5, 1, 0, 0, -2.5, 0, 1, 0, 3.8883605, 0, 0, 1, 5.5, 1, 0, 0, -4.5, 0, 1, 0, 1.8883605, 0, 0, 1, -1, 1, 0, 0, -2.5, 0, 1, 0, 1.8883605, 0, 0, 1, -1, 1, 0, 0, -4.5, 0, 1, 0, 3.8883605, 0, 0, 1, -1, 1, 0, 0, -2.5, 0, 1, 0, 3.8883605, 0, 0, 1, -1, 1, 0, 0, -4.5, 0, 1, 0, 1.8883605, 0, 0, 1, 1, 1, 0, 0, -2.5, 0, 1, 0, 1.8883605, 0, 0, 1, 1, 1, 0, 0, -4.5, 0, 1, 0, 3.8883605, 0, 0, 1, 1, 1, 0, 0, -2.5, 0, 1, 0, 3.8883605, 0, 0, 1, 1, 1, 0, 0, -4.5, 0, 1, 0, 1.8883605, 0, 0, 1, -6, 1, 0, 0, -2.5, 0, 1, 0, 1.8883605, 0, 0, 1, -6, 1, 0, 0, -4.5, 0, 1, 0, 3.8883605, 0, 0, 1, -6, 1, 0, 0, -2.5, 0, 1, 0, 3.8883605, 0, 0, 1, -6, 1, 0, 0, -4.5, 0, 1, 0, 1.8883605, 0, 0, 1, -4, 1, 0, 0, -2.5, 0, 1, 0, 1.8883605, 0, 0, 1, -4, 1, 0, 0, -4.5, 0, 1, 0, 3.8883605, 0, 0, 1, -4, 1, 0, 0, -2.5, 0, 1, 0, 3.8883605, 0, 0, 1, -4, 1, 0, 0, -9, 0, 1, 0, 1.8883605, 0, 0, 1, -6, 1, 0, 0, -7, 0, 1, 0, 1.8883605, 0, 0, 1, -6, 1, 0, 0, -9, 0, 1, 0, 3.8883605, 0, 0, 1, -6, 1, 0, 0, -7, 0, 1, 0, 3.8883605, 0, 0, 1, -6, 1, 0, 0, -9, 0, 1, 0, 1.8883605, 0, 0, 1, -4, 1, 0, 0, -7, 0, 1, 0, 1.8883605, 0, 0, 1, -4, 1, 0, 0, -9, 0, 1, 0, 3.8883605, 0, 0, 1, -4, 1, 0, 0, -7, 0, 1, 0, 3.8883605, 0, 0, 1, -4, 1, 0, 0, -13, 0, 1, 0, 1.8883605, 0, 0, 1, -6, 1, 0, 0, -11, 0, 1, 0, 1.8883605, 0, 0, 1, -6, 1, 0, 0, -13, 0, 1, 0, 3.8883605, 0, 0, 1, -6, 1, 0, 0, -11, 0, 1, 0, 3.8883605, 0, 0, 1, -6, 1, 0, 0, -13, 0, 1, 0, 1.8883605, 0, 0, 1, -4, 1, 0, 0, -11, 0, 1, 0, 1.8883605, 0, 0, 1, -4, 1, 0, 0, -13, 0, 1, 0, 3.8883605, 0, 0, 1, -4, 1, 0, 0, -11, 0, 1, 0, 3.8883605, 0, 0, 1, -4)
-
-[sub_resource type="Curve" id="Curve_ml4yi"]
-
-[sub_resource type="Curve" id="Curve_1dra3"]
-
-[sub_resource type="Curve" id="Curve_4wpfn"]
-
-[sub_resource type="Curve" id="Curve_6nyqv"]
-
-[sub_resource type="Curve" id="Curve_dnl6c"]
-
-[sub_resource type="Curve" id="Curve_rdwqy"]
-
-[sub_resource type="Curve" id="Curve_v2ryw"]
-
-[sub_resource type="Curve" id="Curve_o5rwy"]
+instance_count = 112
+mesh = SubResource("BoxMesh_bgv5t")
+buffer = PackedFloat32Array(1, 0, 0, 1.9134171, 0, 1, 0, 0, 0, 0, 1, -4.6193976, 1, 0, 0, 1.767767, 0, 1, 0, 0.73223305, 0, 0, 1, -4.6193976, 1, 0, 0, 1.3529903, 0, 1, 0, 1.3529903, 0, 0, 1, -4.6193976, 1, 0, 0, 0.73223305, 0, 1, 0, 1.767767, 0, 0, 1, -4.6193976, 1, 0, 0, 1.1716301e-16, 0, 1, 0, 1.9134171, 0, 0, 1, -4.6193976, 1, 0, 0, -0.73223305, 0, 1, 0, 1.767767, 0, 0, 1, -4.6193976, 1, 0, 0, -1.3529903, 0, 1, 0, 1.3529903, 0, 0, 1, -4.6193976, 1, 0, 0, -1.767767, 0, 1, 0, 0.73223305, 0, 0, 1, -4.6193976, 1, 0, 0, -1.9134171, 0, 1, 0, 2.3432603e-16, 0, 0, 1, -4.6193976, 1, 0, 0, -1.767767, 0, 1, 0, -0.73223305, 0, 0, 1, -4.6193976, 1, 0, 0, -1.3529903, 0, 1, 0, -1.3529903, 0, 0, 1, -4.6193976, 1, 0, 0, -0.73223305, 0, 1, 0, -1.767767, 0, 0, 1, -4.6193976, 1, 0, 0, -3.5148903e-16, 0, 1, 0, -1.9134171, 0, 0, 1, -4.6193976, 1, 0, 0, 0.73223305, 0, 1, 0, -1.767767, 0, 0, 1, -4.6193976, 1, 0, 0, 1.3529903, 0, 1, 0, -1.3529903, 0, 0, 1, -4.6193976, 1, 0, 0, 1.767767, 0, 1, 0, -0.73223305, 0, 0, 1, -4.6193976, 1, 0, 0, 3.535534, 0, 1, 0, 0, 0, 0, 1, -3.535534, 1, 0, 0, 3.2664075, 0, 1, 0, 1.3529903, 0, 0, 1, -3.535534, 1, 0, 0, 2.5, 0, 1, 0, 2.5, 0, 0, 1, -3.535534, 1, 0, 0, 1.3529903, 0, 1, 0, 3.2664075, 0, 0, 1, -3.535534, 1, 0, 0, 2.1648902e-16, 0, 1, 0, 3.535534, 0, 0, 1, -3.535534, 1, 0, 0, -1.3529903, 0, 1, 0, 3.2664075, 0, 0, 1, -3.535534, 1, 0, 0, -2.5, 0, 1, 0, 2.5, 0, 0, 1, -3.535534, 1, 0, 0, -3.2664075, 0, 1, 0, 1.3529903, 0, 0, 1, -3.535534, 1, 0, 0, -3.535534, 0, 1, 0, 4.3297804e-16, 0, 0, 1, -3.535534, 1, 0, 0, -3.2664075, 0, 1, 0, -1.3529903, 0, 0, 1, -3.535534, 1, 0, 0, -2.5, 0, 1, 0, -2.5, 0, 0, 1, -3.535534, 1, 0, 0, -1.3529903, 0, 1, 0, -3.2664075, 0, 0, 1, -3.535534, 1, 0, 0, -6.49467e-16, 0, 1, 0, -3.535534, 0, 0, 1, -3.535534, 1, 0, 0, 1.3529903, 0, 1, 0, -3.2664075, 0, 0, 1, -3.535534, 1, 0, 0, 2.5, 0, 1, 0, -2.5, 0, 0, 1, -3.535534, 1, 0, 0, 3.2664075, 0, 1, 0, -1.3529903, 0, 0, 1, -3.535534, 1, 0, 0, 4.6193976, 0, 1, 0, 0, 0, 0, 1, -1.9134171, 1, 0, 0, 4.267767, 0, 1, 0, 1.767767, 0, 0, 1, -1.9134171, 1, 0, 0, 3.2664075, 0, 1, 0, 3.2664075, 0, 0, 1, -1.9134171, 1, 0, 0, 1.767767, 0, 1, 0, 4.267767, 0, 0, 1, -1.9134171, 1, 0, 0, 2.8285654e-16, 0, 1, 0, 4.6193976, 0, 0, 1, -1.9134171, 1, 0, 0, -1.767767, 0, 1, 0, 4.267767, 0, 0, 1, -1.9134171, 1, 0, 0, -3.2664075, 0, 1, 0, 3.2664075, 0, 0, 1, -1.9134171, 1, 0, 0, -4.267767, 0, 1, 0, 1.767767, 0, 0, 1, -1.9134171, 1, 0, 0, -4.6193976, 0, 1, 0, 5.657131e-16, 0, 0, 1, -1.9134171, 1, 0, 0, -4.267767, 0, 1, 0, -1.767767, 0, 0, 1, -1.9134171, 1, 0, 0, -3.2664075, 0, 1, 0, -3.2664075, 0, 0, 1, -1.9134171, 1, 0, 0, -1.767767, 0, 1, 0, -4.267767, 0, 0, 1, -1.9134171, 1, 0, 0, -8.4856957e-16, 0, 1, 0, -4.6193976, 0, 0, 1, -1.9134171, 1, 0, 0, 1.767767, 0, 1, 0, -4.267767, 0, 0, 1, -1.9134171, 1, 0, 0, 3.2664075, 0, 1, 0, -3.2664075, 0, 0, 1, -1.9134171, 1, 0, 0, 4.267767, 0, 1, 0, -1.767767, 0, 0, 1, -1.9134171, 1, 0, 0, 5, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 4.6193976, 0, 1, 0, 1.9134171, 0, 0, 1, 0, 1, 0, 0, 3.535534, 0, 1, 0, 3.535534, 0, 0, 1, 0, 1, 0, 0, 1.9134171, 0, 1, 0, 4.6193976, 0, 0, 1, 0, 1, 0, 0, 3.061617e-16, 0, 1, 0, 5, 0, 0, 1, 0, 1, 0, 0, -1.9134171, 0, 1, 0, 4.6193976, 0, 0, 1, 0, 1, 0, 0, -3.535534, 0, 1, 0, 3.535534, 0, 0, 1, 0, 1, 0, 0, -4.6193976, 0, 1, 0, 1.9134171, 0, 0, 1, 0, 1, 0, 0, -5, 0, 1, 0, 6.123234e-16, 0, 0, 1, 0, 1, 0, 0, -4.6193976, 0, 1, 0, -1.9134171, 0, 0, 1, 0, 1, 0, 0, -3.535534, 0, 1, 0, -3.535534, 0, 0, 1, 0, 1, 0, 0, -1.9134171, 0, 1, 0, -4.6193976, 0, 0, 1, 0, 1, 0, 0, -9.18485e-16, 0, 1, 0, -5, 0, 0, 1, 0, 1, 0, 0, 1.9134171, 0, 1, 0, -4.6193976, 0, 0, 1, 0, 1, 0, 0, 3.535534, 0, 1, 0, -3.535534, 0, 0, 1, 0, 1, 0, 0, 4.6193976, 0, 1, 0, -1.9134171, 0, 0, 1, 0, 1, 0, 0, 4.6193976, 0, 1, 0, 0, 0, 0, 1, 1.9134171, 1, 0, 0, 4.267767, 0, 1, 0, 1.767767, 0, 0, 1, 1.9134171, 1, 0, 0, 3.2664075, 0, 1, 0, 3.2664075, 0, 0, 1, 1.9134171, 1, 0, 0, 1.767767, 0, 1, 0, 4.267767, 0, 0, 1, 1.9134171, 1, 0, 0, 2.8285654e-16, 0, 1, 0, 4.6193976, 0, 0, 1, 1.9134171, 1, 0, 0, -1.767767, 0, 1, 0, 4.267767, 0, 0, 1, 1.9134171, 1, 0, 0, -3.2664075, 0, 1, 0, 3.2664075, 0, 0, 1, 1.9134171, 1, 0, 0, -4.267767, 0, 1, 0, 1.767767, 0, 0, 1, 1.9134171, 1, 0, 0, -4.6193976, 0, 1, 0, 5.657131e-16, 0, 0, 1, 1.9134171, 1, 0, 0, -4.267767, 0, 1, 0, -1.767767, 0, 0, 1, 1.9134171, 1, 0, 0, -3.2664075, 0, 1, 0, -3.2664075, 0, 0, 1, 1.9134171, 1, 0, 0, -1.767767, 0, 1, 0, -4.267767, 0, 0, 1, 1.9134171, 1, 0, 0, -8.4856957e-16, 0, 1, 0, -4.6193976, 0, 0, 1, 1.9134171, 1, 0, 0, 1.767767, 0, 1, 0, -4.267767, 0, 0, 1, 1.9134171, 1, 0, 0, 3.2664075, 0, 1, 0, -3.2664075, 0, 0, 1, 1.9134171, 1, 0, 0, 4.267767, 0, 1, 0, -1.767767, 0, 0, 1, 1.9134171, 1, 0, 0, 3.535534, 0, 1, 0, 0, 0, 0, 1, 3.535534, 1, 0, 0, 3.2664075, 0, 1, 0, 1.3529903, 0, 0, 1, 3.535534, 1, 0, 0, 2.5, 0, 1, 0, 2.5, 0, 0, 1, 3.535534, 1, 0, 0, 1.3529903, 0, 1, 0, 3.2664075, 0, 0, 1, 3.535534, 1, 0, 0, 2.1648902e-16, 0, 1, 0, 3.535534, 0, 0, 1, 3.535534, 1, 0, 0, -1.3529903, 0, 1, 0, 3.2664075, 0, 0, 1, 3.535534, 1, 0, 0, -2.5, 0, 1, 0, 2.5, 0, 0, 1, 3.535534, 1, 0, 0, -3.2664075, 0, 1, 0, 1.3529903, 0, 0, 1, 3.535534, 1, 0, 0, -3.535534, 0, 1, 0, 4.3297804e-16, 0, 0, 1, 3.535534, 1, 0, 0, -3.2664075, 0, 1, 0, -1.3529903, 0, 0, 1, 3.535534, 1, 0, 0, -2.5, 0, 1, 0, -2.5, 0, 0, 1, 3.535534, 1, 0, 0, -1.3529903, 0, 1, 0, -3.2664075, 0, 0, 1, 3.535534, 1, 0, 0, -6.49467e-16, 0, 1, 0, -3.535534, 0, 0, 1, 3.535534, 1, 0, 0, 1.3529903, 0, 1, 0, -3.2664075, 0, 0, 1, 3.535534, 1, 0, 0, 2.5, 0, 1, 0, -2.5, 0, 0, 1, 3.535534, 1, 0, 0, 3.2664075, 0, 1, 0, -1.3529903, 0, 0, 1, 3.535534, 1, 0, 0, 1.9134171, 0, 1, 0, 0, 0, 0, 1, 4.6193976, 1, 0, 0, 1.767767, 0, 1, 0, 0.73223305, 0, 0, 1, 4.6193976, 1, 0, 0, 1.3529903, 0, 1, 0, 1.3529903, 0, 0, 1, 4.6193976, 1, 0, 0, 0.73223305, 0, 1, 0, 1.767767, 0, 0, 1, 4.6193976, 1, 0, 0, 1.1716301e-16, 0, 1, 0, 1.9134171, 0, 0, 1, 4.6193976, 1, 0, 0, -0.73223305, 0, 1, 0, 1.767767, 0, 0, 1, 4.6193976, 1, 0, 0, -1.3529903, 0, 1, 0, 1.3529903, 0, 0, 1, 4.6193976, 1, 0, 0, -1.767767, 0, 1, 0, 0.73223305, 0, 0, 1, 4.6193976, 1, 0, 0, -1.9134171, 0, 1, 0, 2.3432603e-16, 0, 0, 1, 4.6193976, 1, 0, 0, -1.767767, 0, 1, 0, -0.73223305, 0, 0, 1, 4.6193976, 1, 0, 0, -1.3529903, 0, 1, 0, -1.3529903, 0, 0, 1, 4.6193976, 1, 0, 0, -0.73223305, 0, 1, 0, -1.767767, 0, 0, 1, 4.6193976, 1, 0, 0, -3.5148903e-16, 0, 1, 0, -1.9134171, 0, 0, 1, 4.6193976, 1, 0, 0, 0.73223305, 0, 1, 0, -1.767767, 0, 0, 1, 4.6193976, 1, 0, 0, 1.3529903, 0, 1, 0, -1.3529903, 0, 0, 1, 4.6193976, 1, 0, 0, 1.767767, 0, 1, 0, -0.73223305, 0, 0, 1, 4.6193976)
 
 [node name="Playground1" type="Node3D" unique_id=898340550]
 
@@ -34,369 +18,570 @@ buffer = PackedFloat32Array(1, 0, 0, -8.5, 0, 1, 0, 1.8883605, 0, 0, 1, -1, 1, 0
 script = ExtResource("1_1dra3")
 metadata/_custom_type_script = "uid://d1a52k254l7co"
 
-[node name="AdvancedMultimeshPlacer" type="MultiMeshInstance3D" parent="." unique_id=1109143012]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1116395, 0)
+[node name="AdvancedMultimeshPlacer" type="MultiMeshInstance3D" parent="." unique_id=323863984]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0022532344, 0, -0.11651635)
 multimesh = SubResource("MultiMesh_2u2lu")
 script = ExtResource("2_bgv5t")
-mesh = SubResource("BoxMesh_2u2lu")
+mesh = SubResource("BoxMesh_bgv5t")
+instance_transform_modifer = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 metadata/_custom_type_script = "uid://clecahkpvb7jd"
 
-[node name="SculptHandle" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=966125455]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.5, 1.8883605, -1)
-script = ExtResource("3_2u2lu")
-effect_curve = SubResource("Curve_ml4yi")
-
-[node name="SculptHandle2" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1738262246]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 1.8883605, -1)
-script = ExtResource("3_2u2lu")
-effect_curve = SubResource("Curve_1dra3")
-
-[node name="SculptHandle3" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=365951847]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.5, 3.8883605, -1)
-script = ExtResource("3_2u2lu")
-effect_curve = SubResource("Curve_4wpfn")
-
-[node name="SculptHandle4" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1324892248]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 3.8883605, -1)
-script = ExtResource("3_2u2lu")
-effect_curve = SubResource("Curve_6nyqv")
-
-[node name="SculptHandle5" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1935940532]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.5, 1.8883605, 1)
-script = ExtResource("3_2u2lu")
-effect_curve = SubResource("Curve_dnl6c")
-
-[node name="SculptHandle6" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1472555825]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 1.8883605, 1)
-script = ExtResource("3_2u2lu")
-effect_curve = SubResource("Curve_rdwqy")
-
-[node name="SculptHandle7" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=123781517]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.5, 3.8883605, 1)
-script = ExtResource("3_2u2lu")
-effect_curve = SubResource("Curve_v2ryw")
-
-[node name="SculptHandle8" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1573325962]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 3.8883605, 1)
-script = ExtResource("3_2u2lu")
-effect_curve = SubResource("Curve_o5rwy")
-
-[node name="SculptHandle9" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=583293190]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5, 1.8883605, -1)
-script = ExtResource("3_2u2lu")
-effect_curve = SubResource("Curve_ml4yi")
-
-[node name="SculptHandle10" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=382046952]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5, 1.8883605, -1)
-script = ExtResource("3_2u2lu")
-effect_curve = SubResource("Curve_1dra3")
-
-[node name="SculptHandle11" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=432011142]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5, 3.8883605, -1)
-script = ExtResource("3_2u2lu")
-effect_curve = SubResource("Curve_4wpfn")
-
-[node name="SculptHandle12" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1486940837]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5, 3.8883605, -1)
-script = ExtResource("3_2u2lu")
-effect_curve = SubResource("Curve_6nyqv")
-
-[node name="SculptHandle13" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1191041105]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5, 1.8883605, 1)
-script = ExtResource("3_2u2lu")
-effect_curve = SubResource("Curve_dnl6c")
-
-[node name="SculptHandle14" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=921533475]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5, 1.8883605, 1)
-script = ExtResource("3_2u2lu")
-effect_curve = SubResource("Curve_rdwqy")
-
-[node name="SculptHandle15" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=714650317]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5, 3.8883605, 1)
-script = ExtResource("3_2u2lu")
-effect_curve = SubResource("Curve_v2ryw")
-
-[node name="SculptHandle16" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=633547896]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5, 3.8883605, 1)
-script = ExtResource("3_2u2lu")
-effect_curve = SubResource("Curve_o5rwy")
-
-[node name="SculptHandle17" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=290241898]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5, 1.8883605, 3.5)
-script = ExtResource("3_2u2lu")
-effect_curve = SubResource("Curve_ml4yi")
-
-[node name="SculptHandle18" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=575608116]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5, 1.8883605, 3.5)
-script = ExtResource("3_2u2lu")
-effect_curve = SubResource("Curve_1dra3")
-
-[node name="SculptHandle19" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=10280607]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5, 3.8883605, 3.5)
-script = ExtResource("3_2u2lu")
-effect_curve = SubResource("Curve_4wpfn")
-
-[node name="SculptHandle20" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=978100004]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5, 3.8883605, 3.5)
-script = ExtResource("3_2u2lu")
-effect_curve = SubResource("Curve_6nyqv")
-
-[node name="SculptHandle21" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=91379945]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5, 1.8883605, 5.5)
-script = ExtResource("3_2u2lu")
-effect_curve = SubResource("Curve_dnl6c")
-
-[node name="SculptHandle22" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1269291029]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5, 1.8883605, 5.5)
-script = ExtResource("3_2u2lu")
-effect_curve = SubResource("Curve_rdwqy")
-
-[node name="SculptHandle23" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=993797522]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5, 3.8883605, 5.5)
-script = ExtResource("3_2u2lu")
-effect_curve = SubResource("Curve_v2ryw")
-
-[node name="SculptHandle24" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1726823927]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5, 3.8883605, 5.5)
-script = ExtResource("3_2u2lu")
-effect_curve = SubResource("Curve_o5rwy")
-
-[node name="SculptHandle25" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=875496667]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.5, 1.8883605, 3.5)
-script = ExtResource("3_2u2lu")
-effect_curve = SubResource("Curve_ml4yi")
-
-[node name="SculptHandle26" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1824578456]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 1.8883605, 3.5)
-script = ExtResource("3_2u2lu")
-effect_curve = SubResource("Curve_1dra3")
-
-[node name="SculptHandle27" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1674539172]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.5, 3.8883605, 3.5)
-script = ExtResource("3_2u2lu")
-effect_curve = SubResource("Curve_4wpfn")
-
-[node name="SculptHandle28" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=206340355]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 3.8883605, 3.5)
-script = ExtResource("3_2u2lu")
-effect_curve = SubResource("Curve_6nyqv")
-
-[node name="SculptHandle29" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=611670010]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.5, 1.8883605, 5.5)
-script = ExtResource("3_2u2lu")
-effect_curve = SubResource("Curve_dnl6c")
-
-[node name="SculptHandle30" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1977251836]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 1.8883605, 5.5)
-script = ExtResource("3_2u2lu")
-effect_curve = SubResource("Curve_rdwqy")
-
-[node name="SculptHandle31" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1374902544]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.5, 3.8883605, 5.5)
-script = ExtResource("3_2u2lu")
-effect_curve = SubResource("Curve_v2ryw")
-
-[node name="SculptHandle32" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=903189579]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 3.8883605, 5.5)
-script = ExtResource("3_2u2lu")
-effect_curve = SubResource("Curve_o5rwy")
-
-[node name="SculptHandle33" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=487623408]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 1.8883605, 3.5)
-script = ExtResource("3_2u2lu")
-effect_curve = SubResource("Curve_ml4yi")
-
-[node name="SculptHandle34" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=290928426]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 1.8883605, 3.5)
-script = ExtResource("3_2u2lu")
-effect_curve = SubResource("Curve_1dra3")
-
-[node name="SculptHandle35" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1209881971]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 3.8883605, 3.5)
-script = ExtResource("3_2u2lu")
-effect_curve = SubResource("Curve_4wpfn")
-
-[node name="SculptHandle36" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=727320311]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 3.8883605, 3.5)
-script = ExtResource("3_2u2lu")
-effect_curve = SubResource("Curve_6nyqv")
-
-[node name="SculptHandle37" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=280638190]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 1.8883605, 5.5)
-script = ExtResource("3_2u2lu")
-effect_curve = SubResource("Curve_dnl6c")
-
-[node name="SculptHandle38" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=630232883]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 1.8883605, 5.5)
-script = ExtResource("3_2u2lu")
-effect_curve = SubResource("Curve_rdwqy")
-
-[node name="SculptHandle39" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1206241282]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 3.8883605, 5.5)
-script = ExtResource("3_2u2lu")
-effect_curve = SubResource("Curve_v2ryw")
-
-[node name="SculptHandle40" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1993539045]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 3.8883605, 5.5)
-script = ExtResource("3_2u2lu")
-effect_curve = SubResource("Curve_o5rwy")
-
-[node name="SculptHandle41" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=47541113]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 1.8883605, -1)
-script = ExtResource("3_2u2lu")
-effect_curve = SubResource("Curve_ml4yi")
-
-[node name="SculptHandle42" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=131021585]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 1.8883605, -1)
-script = ExtResource("3_2u2lu")
-effect_curve = SubResource("Curve_1dra3")
-
-[node name="SculptHandle43" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=384234487]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 3.8883605, -1)
-script = ExtResource("3_2u2lu")
-effect_curve = SubResource("Curve_4wpfn")
-
-[node name="SculptHandle44" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=349913921]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 3.8883605, -1)
-script = ExtResource("3_2u2lu")
-effect_curve = SubResource("Curve_6nyqv")
-
-[node name="SculptHandle45" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=75094419]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 1.8883605, 1)
-script = ExtResource("3_2u2lu")
-effect_curve = SubResource("Curve_dnl6c")
-
-[node name="SculptHandle46" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1769730698]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 1.8883605, 1)
-script = ExtResource("3_2u2lu")
-effect_curve = SubResource("Curve_rdwqy")
-
-[node name="SculptHandle47" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=153160739]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 3.8883605, 1)
-script = ExtResource("3_2u2lu")
-effect_curve = SubResource("Curve_v2ryw")
-
-[node name="SculptHandle48" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1980142779]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 3.8883605, 1)
-script = ExtResource("3_2u2lu")
-effect_curve = SubResource("Curve_o5rwy")
-
-[node name="SculptHandle49" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1796221227]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 1.8883605, -6)
-script = ExtResource("3_2u2lu")
-effect_curve = SubResource("Curve_ml4yi")
-
-[node name="SculptHandle50" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=273977618]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 1.8883605, -6)
-script = ExtResource("3_2u2lu")
-effect_curve = SubResource("Curve_1dra3")
-
-[node name="SculptHandle51" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=271077600]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 3.8883605, -6)
-script = ExtResource("3_2u2lu")
-effect_curve = SubResource("Curve_4wpfn")
-
-[node name="SculptHandle52" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1333144389]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 3.8883605, -6)
-script = ExtResource("3_2u2lu")
-effect_curve = SubResource("Curve_6nyqv")
-
-[node name="SculptHandle53" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=229360329]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 1.8883605, -4)
-script = ExtResource("3_2u2lu")
-effect_curve = SubResource("Curve_dnl6c")
-
-[node name="SculptHandle54" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=196127213]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 1.8883605, -4)
-script = ExtResource("3_2u2lu")
-effect_curve = SubResource("Curve_rdwqy")
-
-[node name="SculptHandle55" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=61620517]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 3.8883605, -4)
-script = ExtResource("3_2u2lu")
-effect_curve = SubResource("Curve_v2ryw")
-
-[node name="SculptHandle56" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=935881115]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 3.8883605, -4)
-script = ExtResource("3_2u2lu")
-effect_curve = SubResource("Curve_o5rwy")
-
-[node name="SculptHandle57" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=579859642]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 1.8883605, -6)
-script = ExtResource("3_2u2lu")
-effect_curve = SubResource("Curve_ml4yi")
-
-[node name="SculptHandle58" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=733152035]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 1.8883605, -6)
-script = ExtResource("3_2u2lu")
-effect_curve = SubResource("Curve_1dra3")
-
-[node name="SculptHandle59" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=2006999181]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 3.8883605, -6)
-script = ExtResource("3_2u2lu")
-effect_curve = SubResource("Curve_4wpfn")
-
-[node name="SculptHandle60" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1363930633]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 3.8883605, -6)
-script = ExtResource("3_2u2lu")
-effect_curve = SubResource("Curve_6nyqv")
-
-[node name="SculptHandle61" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=186104929]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 1.8883605, -4)
-script = ExtResource("3_2u2lu")
-effect_curve = SubResource("Curve_dnl6c")
-
-[node name="SculptHandle62" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=788865400]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 1.8883605, -4)
-script = ExtResource("3_2u2lu")
-effect_curve = SubResource("Curve_rdwqy")
-
-[node name="SculptHandle63" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=713481123]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 3.8883605, -4)
-script = ExtResource("3_2u2lu")
-effect_curve = SubResource("Curve_v2ryw")
-
-[node name="SculptHandle64" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=74719418]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 3.8883605, -4)
-script = ExtResource("3_2u2lu")
-effect_curve = SubResource("Curve_o5rwy")
-
-[node name="SculptHandle65" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1732290403]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 1.8883605, -6)
-script = ExtResource("3_2u2lu")
-effect_curve = SubResource("Curve_ml4yi")
-
-[node name="SculptHandle66" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=965218447]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 1.8883605, -6)
-script = ExtResource("3_2u2lu")
-effect_curve = SubResource("Curve_1dra3")
-
-[node name="SculptHandle67" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1049842713]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 3.8883605, -6)
-script = ExtResource("3_2u2lu")
-effect_curve = SubResource("Curve_4wpfn")
-
-[node name="SculptHandle68" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=403572401]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 3.8883605, -6)
-script = ExtResource("3_2u2lu")
-effect_curve = SubResource("Curve_6nyqv")
-
-[node name="SculptHandle69" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1030974537]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 1.8883605, -4)
-script = ExtResource("3_2u2lu")
-effect_curve = SubResource("Curve_dnl6c")
-
-[node name="SculptHandle70" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=7644333]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 1.8883605, -4)
-script = ExtResource("3_2u2lu")
-effect_curve = SubResource("Curve_rdwqy")
-
-[node name="SculptHandle71" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1507148281]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 3.8883605, -4)
-script = ExtResource("3_2u2lu")
-effect_curve = SubResource("Curve_v2ryw")
-
-[node name="SculptHandle72" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=574702089]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 3.8883605, -4)
-script = ExtResource("3_2u2lu")
-effect_curve = SubResource("Curve_o5rwy")
+[node name="Handle" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=2114911842]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9134171, 0, -4.6193976)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27310" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1980877523]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.767767, 0.73223305, -4.6193976)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27311" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1673685630]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3529903, 1.3529903, -4.6193976)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27312" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1334216366]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.73223305, 1.767767, -4.6193976)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27313" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1706624304]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1716301e-16, 1.9134171, -4.6193976)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27314" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1127095860]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.73223305, 1.767767, -4.6193976)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27315" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1520838324]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3529903, 1.3529903, -4.6193976)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27316" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=918413707]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.767767, 0.73223305, -4.6193976)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27317" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=422724910]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9134171, 2.3432603e-16, -4.6193976)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27318" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=58974147]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.767767, -0.73223305, -4.6193976)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27319" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=41616932]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3529903, -1.3529903, -4.6193976)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27320" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=793417233]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.73223305, -1.767767, -4.6193976)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27321" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=556798351]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5148903e-16, -1.9134171, -4.6193976)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27322" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=2001966513]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.73223305, -1.767767, -4.6193976)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27323" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=483799182]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3529903, -1.3529903, -4.6193976)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27324" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=379250712]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.767767, -0.73223305, -4.6193976)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27325" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=812497848]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.535534, 0, -3.535534)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27326" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=892630107]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2664075, 1.3529903, -3.535534)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27327" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=967532244]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 2.5, -3.535534)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27328" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1434706044]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3529903, 3.2664075, -3.535534)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27329" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1682334053]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1648902e-16, 3.535534, -3.535534)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27330" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=990825152]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3529903, 3.2664075, -3.535534)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27331" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=686424823]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 2.5, -3.535534)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27332" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=155963371]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2664075, 1.3529903, -3.535534)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27333" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1994543066]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.535534, 4.3297804e-16, -3.535534)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27334" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1668977906]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2664075, -1.3529903, -3.535534)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27335" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=2030247781]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, -2.5, -3.535534)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27336" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=685123289]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3529903, -3.2664075, -3.535534)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27337" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1198867650]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.49467e-16, -3.535534, -3.535534)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27338" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=829078286]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3529903, -3.2664075, -3.535534)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27339" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1489446446]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, -2.5, -3.535534)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27340" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1906771960]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2664075, -1.3529903, -3.535534)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27341" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1604150607]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.6193976, 0, -1.9134171)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27342" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=924744527]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.267767, 1.767767, -1.9134171)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27343" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=32922045]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2664075, 3.2664075, -1.9134171)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27344" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=156813544]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.767767, 4.267767, -1.9134171)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27345" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=844969452]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8285654e-16, 4.6193976, -1.9134171)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27346" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=382990307]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.767767, 4.267767, -1.9134171)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27347" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=767487472]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2664075, 3.2664075, -1.9134171)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27348" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1361471368]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.267767, 1.767767, -1.9134171)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27349" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=427688794]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.6193976, 5.657131e-16, -1.9134171)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27350" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1766302824]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.267767, -1.767767, -1.9134171)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27351" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1285724150]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2664075, -3.2664075, -1.9134171)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27352" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=523340954]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.767767, -4.267767, -1.9134171)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27353" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=13535452]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.4856957e-16, -4.6193976, -1.9134171)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27354" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1348678485]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.767767, -4.267767, -1.9134171)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27355" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1001706553]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2664075, -3.2664075, -1.9134171)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27356" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=365010045]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.267767, -1.767767, -1.9134171)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27357" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=645204986]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27358" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1420286425]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.6193976, 1.9134171, 0)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27359" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=185754373]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.535534, 3.535534, 0)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27360" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1871938336]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9134171, 4.6193976, 0)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27361" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1270265306]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.061617e-16, 5, 0)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27362" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=717575866]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9134171, 4.6193976, 0)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27363" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=298474475]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.535534, 3.535534, 0)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27364" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=767772445]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.6193976, 1.9134171, 0)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27365" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1909923801]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 6.123234e-16, 0)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27366" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1686463671]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.6193976, -1.9134171, 0)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27367" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1966523923]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.535534, -3.535534, 0)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27368" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1190559619]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9134171, -4.6193976, 0)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27369" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=2051268462]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.18485e-16, -5, 0)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27370" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1506816570]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9134171, -4.6193976, 0)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27371" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1644234211]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.535534, -3.535534, 0)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27372" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=2011169463]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.6193976, -1.9134171, 0)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27373" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1790713194]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.6193976, 0, 1.9134171)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27374" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1269106258]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.267767, 1.767767, 1.9134171)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27375" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1750165033]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2664075, 3.2664075, 1.9134171)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27376" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1597037613]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.767767, 4.267767, 1.9134171)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27377" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=381159627]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8285654e-16, 4.6193976, 1.9134171)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27378" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1557450856]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.767767, 4.267767, 1.9134171)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27379" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=845661796]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2664075, 3.2664075, 1.9134171)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27380" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=171265379]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.267767, 1.767767, 1.9134171)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27381" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1840649501]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.6193976, 5.657131e-16, 1.9134171)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27382" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=763811830]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.267767, -1.767767, 1.9134171)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27383" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=457344224]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2664075, -3.2664075, 1.9134171)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27384" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=697567782]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.767767, -4.267767, 1.9134171)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27385" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1511337688]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.4856957e-16, -4.6193976, 1.9134171)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27386" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=290971180]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.767767, -4.267767, 1.9134171)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27387" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1676871305]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2664075, -3.2664075, 1.9134171)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27388" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1635517924]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.267767, -1.767767, 1.9134171)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27389" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=526378040]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.535534, 0, 3.535534)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27390" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1171348781]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2664075, 1.3529903, 3.535534)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27391" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=497033312]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 2.5, 3.535534)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27392" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1402749110]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3529903, 3.2664075, 3.535534)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27393" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=951145996]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1648902e-16, 3.535534, 3.535534)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27394" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=2101127668]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3529903, 3.2664075, 3.535534)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27395" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=727414865]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 2.5, 3.535534)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27396" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=560104064]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2664075, 1.3529903, 3.535534)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27397" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1038239001]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.535534, 4.3297804e-16, 3.535534)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27398" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1011043233]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2664075, -1.3529903, 3.535534)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27399" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=597028151]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, -2.5, 3.535534)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27400" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=401400758]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3529903, -3.2664075, 3.535534)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27401" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1797066584]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.49467e-16, -3.535534, 3.535534)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27402" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1361813618]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3529903, -3.2664075, 3.535534)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27403" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=359099421]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, -2.5, 3.535534)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27404" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1206851837]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2664075, -1.3529903, 3.535534)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27405" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=394479171]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9134171, 0, 4.6193976)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27406" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1930634651]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.767767, 0.73223305, 4.6193976)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27407" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1117826928]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3529903, 1.3529903, 4.6193976)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27408" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=970120178]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.73223305, 1.767767, 4.6193976)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27409" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1118711068]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1716301e-16, 1.9134171, 4.6193976)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27410" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=29031560]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.73223305, 1.767767, 4.6193976)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27411" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=594021079]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3529903, 1.3529903, 4.6193976)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27412" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=830694382]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.767767, 0.73223305, 4.6193976)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27413" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=406013773]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9134171, 2.3432603e-16, 4.6193976)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27414" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1105022124]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.767767, -0.73223305, 4.6193976)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27415" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=756410788]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3529903, -1.3529903, 4.6193976)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27416" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=1728432586]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.73223305, -1.767767, 4.6193976)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27417" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=889948138]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5148903e-16, -1.9134171, 4.6193976)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27418" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=682839555]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.73223305, -1.767767, 4.6193976)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27419" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=144322252]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3529903, -1.3529903, 4.6193976)
+script = ExtResource("1_1dra3")
+conform_to_grid = false
+
+[node name="@Node3D@27420" type="Node3D" parent="AdvancedMultimeshPlacer" unique_id=473804670]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.767767, -0.73223305, 4.6193976)
+script = ExtResource("1_1dra3")
+conform_to_grid = false

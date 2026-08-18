@@ -4,6 +4,7 @@ class_name AdvancedCSGPolygon extends CSGPolygon3D
 var handles : Array = []
 
 func _ready() -> void:
+	if not Engine.is_editor_hint(): return
 	create_handles_square()
 
 func create_handles_square():
@@ -26,6 +27,7 @@ func create_handles_square():
 var last_pos : Array = []
 var was_moving := false
 func _process(_delta: float) -> void:
+	if not Engine.is_editor_hint(): return
 	var updated_handles : Array = []
 	for child in get_children():
 		child = child as Handle

@@ -2,6 +2,11 @@
 class_name AdvancedMultimeshPlacer extends AdvancedMultimesh
 
 @export var mesh : Mesh
+@export_group("Instance Transform Modifer")
+ ## Adds this transform to the transform of each of the nodes so you can perform operations on all mesh instances at once. 
+@export var instance_transform_modifer_position : Vector3
+@export var instance_transform_modifer_rotation : Vector3
+@export var instance_transform_modifer_scale : Vector3
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -18,6 +23,6 @@ func _update_handles():
 
 	for i in range(len(handles)):
 		var handle = handles[i]
-		
+
 		multimesh.set_instance_transform(i, handle.transform)
 		
